@@ -6,7 +6,7 @@
 
 在线文档（Read the Docs）：
 
-> **https://company-systems.readthedocs.io/zh-cn/latest/**
+> **https://company.readthedocs.io/zh-cn/latest/**
 
 ## 目录结构
 
