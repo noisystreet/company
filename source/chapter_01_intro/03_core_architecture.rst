@@ -2,7 +2,7 @@
 .. 解析公司治理的核心架构——三会一层体系
 .. 包括：股东会、董事会、监事会、管理层的职责与权力配置、
 ..      权力制衡的逻辑基础、三权分立的治理哲学
-.. 详见：:ref:`股东会 <chapter-02-shareholders>`、:ref:`董事会 <chapter-02-board>`、:ref:`监事会 <chapter-02-supervisors>`、:ref:`管理层 <chapter-02-management>`
+.. 详见：:ref:`股东会 <chapter-02-shareholders>`、:ref:`董事会 <chapter-02-board>`、:ref:`监事会 <chapter-02-supervisors>`、:ref:`管理层 <chapter-02-management>` 
 .. 写作日期：2026-07-14
 
 ========================
