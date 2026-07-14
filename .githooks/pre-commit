@@ -1,0 +1,8 @@
+#!/bin/bash
+# pre-commit hook — 提交前自动检查
+set -e
+
+echo "=== [pre-commit] Running RST syntax check ==="
+bash scripts/precommit-check.sh
+
+echo "=== [pre-commit] All checks passed ==="
