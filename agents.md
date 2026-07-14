@@ -112,3 +112,11 @@ make html
 - **语法检查**：`bash scripts/precommit-check.sh`
 - **git hooks**（仅在需要提交触发 pre-commit 检查时）：`git config --local core.hooksPath .githooks`。
 - 修改 `.rst` 内容后无热重载，需重新 `make html` 才能在预览中看到更新。
+
+## Cursor Cloud specific instructions
+
+本仓库是一个 Sphinx 静态文档站点（无后端 / 数据库 / Node 服务）。构建、预览、语法检查命令见上文《开发提示》与 README，此处不重复。以下为非显而易见的注意事项：
+
+- **预览服务需前台常驻**：`make serve` 会先 `make html` 再运行 `python3 -m http.server`（默认 8000 端口），进程会阻塞。请在 tmux 会话中启动，或直接 `cd _build/html && python3 -m http.server 8000`。核心功能验证方式：加载首页后用左侧边栏在章节/小节间导航阅读（中文内容与表格均正常渲染）。
+- **站内搜索当前不可用（已知上游问题，非本仓库代码缺陷）**：`requirements.txt` 未固定版本，安装的最新 Sphinx（9.x）在中文 `zh_CN` 搜索上有回归——生成的 `_build/html/_static/language_data.js` 结尾为 `window.Stemmer = ChineseStemmer;`，但未定义 `ChineseStemmer`，浏览器控制台报 `ChineseStemmer is not defined`，搜索页会停在“正在搜索中...”。这只影响可选的搜索功能，不影响文档浏览/阅读。如需修复，可在 `requirements.txt` 中固定到中文搜索可用的旧版 Sphinx（属于产品依赖变更，会同时影响 Read the Docs 构建，需谨慎）。
+- `make html` 结束时的若干 warning 不阻塞构建（`.readthedocs.yaml` 亦为 `fail_on_warning: false`）。
