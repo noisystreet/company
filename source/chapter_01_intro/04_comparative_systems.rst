@@ -167,7 +167,7 @@
    - 仅收取年度牌照费（Annual Fee），费用较低
 
 中国企业的常见架构
-   中国企业境外上市通常搭建 **:ref:`VIE架构 <chapter-04-vie>`** 或 **:ref:`红筹架构 <chapter-07-overseas>`** ，以开曼公司作为
+   中国企业境外上市通常搭建 VIE架构（:ref:`详见第4章 <chapter-04-vie>`）或 红筹架构（:ref:`详见第7章 <chapter-07-overseas>`），以开曼公司作为
    上市主体：
 
    ::
