@@ -33,7 +33,7 @@
      - 出让股权（稀释控制权）
      - 利息支出（财务费用）
    * - **控制权影响**
-     - 显著稀释创始团队投票权（详见:ref:`AB股 <chapter-04-dual-class>`与:ref:`GP-LP架构 <chapter-04-platform>`的保护机制）
+     - 显著稀释创始团队投票权（详见 :ref:`AB股 <chapter-04-dual-class>` 与 :ref:`GP-LP架构 <chapter-04-platform>` 的保护机制）
      - 不影响控制权（但可能附带约束条款）
    * - **还款压力**
      - 无强制还款义务

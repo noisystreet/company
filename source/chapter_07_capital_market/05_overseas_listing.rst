@@ -109,7 +109,7 @@
      - 内地企业直接赴港
    * - 红筹架构
      - 通过境外离岸公司控股境内实体，以境外公司名义上市
-     - 常采用:ref:`VIE架构 <chapter-04-vie>`或:ref:`AB股 <chapter-04-dual-class>`结构
+     - 常采用 :ref:`VIE架构 <chapter-04-vie>` 或 :ref:`AB股 <chapter-04-dual-class>` 结构
    * - 二次上市 / 双重上市
      - 已在美股上市的中概股回港二次上市
      - 中概股回归
