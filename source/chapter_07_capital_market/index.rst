@@ -11,6 +11,7 @@
    - 各板块定位与上市规则
    - 注册制改革
    - 香港及境外上市
+   - IPO 流程与实务
 
 .. toctree::
    :maxdepth: 2
@@ -20,3 +21,4 @@
    03_listing_rules
    04_registration_reform
    05_overseas_listing
+   06_ipo_process
