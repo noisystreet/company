@@ -146,7 +146,7 @@ PCAOB检查的运作机制与最新进展
 VIE架构风险
 ===========
 
-:ref:`VIE <chapter-04-vie>`（Variable Interest Entity，可变利益实体）架构是中国企业境外上市的特殊结构。
+:ref:`VIE <chapter-04-vie>` （Variable Interest Entity，可变利益实体）架构是中国企业境外上市的特殊结构。
 
 .. list-table:: VIE架构的基本结构
    :header-rows: 1
