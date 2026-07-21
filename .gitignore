@@ -1,5 +1,6 @@
 # Sphinx 构建输出
 _build/
+build/
 
 # Python 缓存
 __pycache__/
