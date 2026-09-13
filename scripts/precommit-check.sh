@@ -1,24 +1,16 @@
 #!/bin/bash
-# precommit-check.sh — 验证 RST 文档语法
-# 使用 Sphinx 的 rst2html 工具检查所有 .rst 文件的语法
+# precommit-check.sh — 提交前检查
+# 1. RST 语法：docutils 真实解析（scripts/check-rst-syntax.py）
+# 2. 中文排版：盘古之白间距 + 引号成对（scripts/check-cjk-spacing.py）
 
 set -e
 
-echo "=== Checking RST syntax ==="
 cd "$(git rev-parse --show-toplevel 2>/dev/null || echo "$(dirname "$0")/..")"
 
-# 查找所有 .rst 文件并检查语法
-ERRORS=0
-while IFS= read -r -d '' file; do
-    if ! python3 -m sphinx.util.rst check "$file" 2>/dev/null; then
-        echo "ERROR: $file"
-        ERRORS=$((ERRORS + 1))
-    fi
-done < <(find source/ -name "*.rst" -print0)
+echo "=== Checking RST syntax ==="
+python3 scripts/check-rst-syntax.py
 
-if [ $ERRORS -eq 0 ]; then
-    echo "=== All RST files passed ==="
-else
-    echo "=== $ERRORS file(s) had errors ==="
-    exit 1
-fi
+echo "=== Checking CJK spacing & quotes ==="
+python3 scripts/check-cjk-spacing.py
+
+echo "=== All checks passed ==="
