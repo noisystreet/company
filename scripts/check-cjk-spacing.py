@@ -62,7 +62,8 @@ def compute_skips(lines: list[str]) -> list[bool]:
                 i += 1
                 continue
             m = RE_DIRECTIVE.match(line)
-            name = m.group(1) if m else ""
+            # [\w:-]+ 会贪婪吞掉尾部 "::"，须剥离后才能比对指令名
+            name = m.group(1).rstrip(":") if m else ""
             is_literal = (m is None) or (name in LITERAL_DIRECTIVES)
             base = len(line) - len(line.lstrip())
             skip[i] = True
